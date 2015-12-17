@@ -1170,19 +1170,17 @@ void MSG_WriteDeltaPlayerstate( msg_t *msg, struct playerState_s *from, struct p
 		Com_Memset (&dummy, 0, sizeof(dummy));
 	}
 
-	
-
-	altlog("Player: %d", from->clientNum);
-	altlog("Current health: %d", from->stats[0]);
+	altlog("Player,%d", from->clientNum);
+	//altlog("Current health: %d", from->stats[0]);
 	if (from->stats[0] <= 0)
 	{
-		altlog("Died At:X = %f, Y = %f", from->origin[0], from->origin[1]);
+		altlog("Died At,%f,%f,%f", from->origin[0], from->origin[1], from->origin[2]);
 	}
 	else
 	{
-		altlog("Current Position:X = %f, Y = %f", from->origin[0], from->origin[1]);
+		altlog("Current Position,%f,%f,%f", from->origin[0], from->origin[1], from->origin[2]);
 	}
-	altlog("Viewpoint: X = %f, Y = %f", from->viewangles[0], from->viewangles[1]);
+	altlog("Viewpoint,%f,%f\n", from->viewangles[0], from->viewangles[1]);
 
 	numFields = ARRAY_LEN( playerStateFields );
 

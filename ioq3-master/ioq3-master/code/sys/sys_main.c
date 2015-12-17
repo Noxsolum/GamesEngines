@@ -678,8 +678,8 @@ int main( int argc, char **argv )
 
 	NET_Init( );
 
-	altlog("boob");
-	altlog("other boob");
+	//altlog("boob");
+	//altlog("other boob");
 
 	CON_Init( );
 
