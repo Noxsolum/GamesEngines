@@ -3412,3 +3412,5 @@ Player 2
 Current Position 1152.237671 1136.875000 216.125000
 Viewpoint -9.019775 67.022095
 
+Date and Time of Logging: [Wed Jan  6 18:17:50 2016
+]

@@ -1,16 +1,19 @@
+// ==================================
+// --- Including the header file ---
+// ==================================
 #include "altlog.h"
-#include <stdarg.h>
-#include <time.h>
 
+// =====================
+// --- Initializing ---
+// =====================
 logger my_log;
-
 FILE *fp = NULL;
+
 // ==========================================
 // Put this at the beginning of the main() 
 // Hint: In the sys_main.c file at line 273.
 // This Opens the file for editing
 // ==========================================
-
 void fileOpen()
 {
 #ifndef RELEASE // Optimisation for Release build.
@@ -35,9 +38,9 @@ void Profiler()
 	printf("1 = Logging to File.\n");
 	printf("2 = Logging to Console.\n");
 	printf("3 = Logging to Both.\n");
-	printf("Please enter a number between 0 and 3!");
+	printf("Please enter a number between 0 and 3!\n");
 
-	// Scans the User input
+	// Scans the user input
 	int loggingType;
 	loggingType = scanf("%d", loggingType);
 	my_log = loggingType;
@@ -48,7 +51,7 @@ void Profiler()
 	{
 		time_t mytime;
 		mytime = time(NULL);
-		fprintf(fp, "Date and Time of Logging: [%s]", ctime(&mytime));
+		fprintf(fp, "Date and Time of Logging: [%s]\n", ctime(&mytime));
 	}
 
 #endif // Optimisation for Release build.
